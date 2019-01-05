@@ -10,8 +10,11 @@ spec:
   template:
     spec:
       containers:
-        - image: sulevsky/kubemetrics:latest
+        - image: sulevsky/kubemetrics:0.0.2-SNAPSHOT
           name: spring-demo-container
+          env:
+            - name: MESSAGE
+              value: overriden_environment_variable
     metadata:
       labels:
         app: spring-demo
