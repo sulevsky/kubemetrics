@@ -12,9 +12,9 @@ spec:
       containers:
         - image: sulevsky/kubemetrics:0.0.2-SNAPSHOT
           name: spring-demo-container
-          env:
-            - name: MESSAGE
-              value: overriden_environment_variable
+          envFrom:
+            - configMapRef:
+                name: application-config-map
     metadata:
       labels:
         app: spring-demo
@@ -40,3 +40,10 @@ spec:
   ports:
     - port: 8080
       nodePort: 30002
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: application-config-map
+data:
+  MESSAGE: from_config_map
