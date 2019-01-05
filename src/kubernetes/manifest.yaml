@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: app-deploy
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: spring-demo
+  template:
+    spec:
+      containers:
+        - image: sulevsky/kubemetrics:latest
+          name: spring-demo-container
+    metadata:
+      labels:
+        app: spring-demo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: inner-service
+spec:
+  selector:
+    app: spring-demo
+  ports:
+    - port: 8080
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: outer-service
+spec:
+  type: NodePort
+  selector:
+    app: spring-demo
+  ports:
+    - port: 8080
+      nodePort: 30002
