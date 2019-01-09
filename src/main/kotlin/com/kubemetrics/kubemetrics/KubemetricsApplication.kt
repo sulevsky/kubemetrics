@@ -1,5 +1,6 @@
 package com.kubemetrics.kubemetrics
 
+import io.micrometer.core.annotation.Timed
 import org.springframework.beans.factory.annotation.Value
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.boot.runApplication
@@ -11,6 +12,7 @@ class KubemetricsApplication
 
 @RestController
 class HelloController(@Value("\${message}") val message: String) {
+    @Timed
     @GetMapping("/greeting")
     fun getGreeting(): String {
         return message
