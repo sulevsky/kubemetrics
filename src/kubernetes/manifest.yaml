@@ -10,7 +10,7 @@ spec:
   template:
     spec:
       containers:
-        - image: sulevsky/kubemetrics:0.0.2-SNAPSHOT
+        - image: sulevsky/kubemetrics:0.0.3-SNAPSHOT
           name: spring-demo-container
           envFrom:
             - configMapRef:
