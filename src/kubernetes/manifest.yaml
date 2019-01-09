@@ -15,6 +15,10 @@ spec:
           envFrom:
             - configMapRef:
                 name: application-config-map
+          livenessProbe:
+            httpGet:
+              path: /actuator/health
+              port: 8080
     metadata:
       labels:
         app: spring-demo
