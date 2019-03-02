@@ -1,0 +1,10 @@
+= Users service
+Version: {version}
+
+include::etc/release-notes.adoc[]
+
+
+
+== Public API
+
+include::etc/user.adoc[]

@@ -1,0 +1,3 @@
+== Release notes
+** v-0.0.5
+- Added endpoint create <<Create user>> and get users by id <<Get user by id>>

@@ -1,0 +1,45 @@
+
+=== User
+Endpoints for accessing User data.
+
+
+
+==== Create user
+
+===== HTTP request
+include::{snippets}/users/create/http-request.adoc[]
+
+===== Request fields
+include::{snippets}/users/create/request-fields.adoc[]
+
+===== HTTP response
+include::{snippets}/users/create/http-response.adoc[]
+
+===== Curl example
+include::{snippets}/users/create/curl-request.adoc[]
+
+===== Httpie example
+include::{snippets}/users/create/httpie-request.adoc[]
+
+
+
+==== Get user by id
+
+===== Path parameters
+include::{snippets}/users/read-by-id/path-parameters.adoc[]
+
+===== HTTP request
+include::{snippets}/users/read-by-id/http-request.adoc[]
+
+===== HTTP response
+include::{snippets}/users/read-by-id/http-response.adoc[]
+
+===== Response fields
+include::{snippets}/users/read-by-id/response-fields.adoc[]
+
+===== Curl example
+include::{snippets}/users/read-by-id/curl-request.adoc[]
+
+===== Httpie example
+include::{snippets}/users/read-by-id/httpie-request.adoc[]
+

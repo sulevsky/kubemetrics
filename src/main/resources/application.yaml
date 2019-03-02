@@ -1,5 +1,9 @@
 management:
-    endpoints.web.exposure.include:
-      - 'prometheus'
-      - 'health'
-    endpoint.health.show-details: always
+  endpoints.web.exposure.include: "*"
+  endpoint.health.show-details: always
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://db-user:#85m0KMzzM13@cluster0-shard-00-00-3reza.mongodb.net:27017,cluster0-shard-00-01-3reza.mongodb.net:27017,cluster0-shard-00-02-3reza.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true
+      database: demo-db

@@ -1,17 +1,16 @@
-package com.kubemetrics.kubemetrics
+package com.kubemetrics
 
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.springframework.boot.test.context.SpringBootTest
 import org.springframework.test.context.junit4.SpringRunner
 
-@RunWith(SpringRunner::class)
+@RunWith(SpringRunner.class)
 @SpringBootTest
 class KubemetricsApplicationTests {
 
     @Test
-    fun contextLoads() {
+    void contextLoads() {
     }
-
 }
 
