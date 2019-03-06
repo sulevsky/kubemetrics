@@ -8,7 +8,7 @@
 `gradle bootJar`
 
 ## Run locally
-`java -jar build/libs/kubemetrics-0.0.5-SNAPSHOT.jar`
+`java -jar build/libs/kubemetrics-0.0.6-SNAPSHOT.jar`
 
 Version and path can change
 
@@ -21,7 +21,7 @@ If you start application locally, in container or make requests to deployed app 
 Requires credentials
 
 ## Run locally in docker
-`docker run -d -p 8080:8080 sulevsky/kubemetrics:0.0.5-SNAPSHOT`
+`docker run -d -p 8080:8080 sulevsky/kubemetrics:0.0.6-SNAPSHOT`
 
 https://cloud.docker.com/repository/docker/sulevsky/kubemetrics
 
